@@ -1,0 +1,136 @@
+<aside id="sidebar">
+  <button id="btnToggleSideBar" class="btn-side-toggle toggles-sidebar">
+    <span id="iconToggleSideBar" class="material-icons">
+      chevron_left
+    </span>
+  </button>
+
+  <ul class="tabs settings-tabs">
+    <!-- TODO: this is invisible but needed to reuse the sidebar -->
+    <li class="tab col s3"><a id="sidebarTabAppearance" class="active" href="#sidebarSettings">Appearance</a></li>
+  </ul>
+
+  {{ sidebars_specific }}
+
+  <div class="sidebar-content" id="sidebarSettings">
+
+    <header class="modal-section-header toggles-content" target="general-settings">
+      <h5 class="modal-section-heading">General Settings</h5> <i class="material-icons">arrow_drop_down</i>
+    </header>
+
+    <div class="slidering" id="general-settings">
+      <hr>
+      {{ general_settings }}
+      <p> Input: <br><b id="inputFileAF"></b> </p>
+
+      <div id="arg-ext-related">
+        <div id="legend">
+
+        </div>
+        
+        <label>Tooltip Position</label>
+        <div class="modal-option modal-option-select">
+          <select id="toolTipPosition" class="browser-default">
+            <option value="mousePosition">Pointer Location</option>
+            <option value="leftBottom">Left Bottom Corner</option>
+          </select>
+        </div>
+
+        <p><a class="waves-effect waves-light" id="undo-selection">Clear Selection</a></p>
+        <p><a class="waves-effect waves-light" id="export-selection">Export Selection </a></p>
+
+        <!--
+        <br>
+        <p> <b> TODO: </b>  </p>  
+        <p>filtering with the legend </p>
+        
+        <p> color wheel selector for semantics </p>
+        <p> color scheme dropdown for matrix </p>
+        <p> resizer between the 3 views </p>
+        <!-- -->
+      </div>
+    </div>
+
+    <header class="modal-section-header toggles-content" target="arguments-settings">
+      <h5 class="modal-section-heading">Arguments Bar Chart</h5> <i class="material-icons">arrow_drop_down</i>
+    </header>
+
+    <div class="slidering" id="arguments-settings">
+      <hr>
+      <div class="modal-option">
+        <p> Argument inspector* </p>
+        <div class="switch">
+          <label>
+            <input id="toggleExtensionInspection" type="checkbox" checked="checked">
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+      <div class="modal-option" id="toggleFacetedExtensionInspectionDiv">
+        <p> Faceted navigation </p>
+        <div class="switch">
+          <label>
+            <input id="toggleFacetedExtensionInspection" type="checkbox" checked="checked">
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+      <!-- <p> TODO: brush selection settings? </p> -->
+    </div>
+
+    <header class="modal-section-header toggles-content" target="extensions-settings">
+      <h5 class="modal-section-heading">Extensions Scatterplot</h5> <i class="material-icons">arrow_drop_down</i>
+    </header>
+
+    <div class="slidering" id="extensions-settings">
+      <hr>
+      <div class="modal-option">
+        <p> Dim. reduction includes semantics </p>
+        <div class="switch">
+          <label>
+            <input id="toggleExtensionsPlot" type="checkbox">
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="modal-option">
+        <p> Extension inspector* </p>
+        <div class="switch">
+          <label>
+            <input id="toggleExtensionArgumentInspection" type="checkbox">
+            <span class="lever"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!--
+    <header class="modal-section-header toggles-content" target="correlation-settings">
+      <h5 class="modal-section-heading">Argument Correlation Matrix</h5> <i class="material-icons">arrow_drop_down</i>
+    </header>
+
+    <div class="slidering" id="correlation-settings">
+      <hr>
+      <p> TODO: </p>
+      <p> compress matrices (remove NaN rows/columns, only when separate) </p>
+      compute the values from the gihub issue to highlight (give me all the arguments that have higher than something)
+
+    </div>
+    -->
+
+    <header class="modal-section-header toggles-content" target="upload-settings">
+      <h5 class="modal-section-heading">Projects</h5> <i class="material-icons">arrow_drop_down</i>
+    </header>
+
+    <div class="slidering" id="upload-settings">
+      <hr>
+      <p><a class="waves-effect waves-light" id="new-project">New Project...</a></p>
+    </div>
+
+
+    {{ settings_specific }}
+
+  </div>
+
+</aside>

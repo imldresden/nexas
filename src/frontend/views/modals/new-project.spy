@@ -1,0 +1,87 @@
+<!-- File upload modal -->
+<div id="new-project-modal" class="modal upload-file-modal">
+
+    <div class="modal-content">
+        <i class="material-icons right modal-close">close</i>
+        <header>
+            <h4>Compute a new solution space</h4>
+        </header>
+
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">create_new_folder</i>
+                        <input id="_id" class="validate" type="tel">
+                        <label for="_id">Project Identifier</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <p>Select a <span id="what-is-uploaded"> .apx </span> file </p>
+                        <div class="file-field input-field">
+                            <div class="btn btn-primary">
+                                <i class="material-icons">upload</i>
+                                <input id="browseButton" type="file" accept=".apx">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input id="browseFilePath" class="file-path validate" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-field col s6">
+                        <div class="">
+                            <label>Semantics A: </label>
+                        </div>
+                        <div>
+                            <select id="_semantic-a" class="browser-default">
+                                <option value="cf2">cf2</option>
+                                <option value="admissible">admissible</option>
+                                <option value="complete">complete</option>
+                                <option value="preferred">preferred</option>
+                                <option value="semi-stable">semi-stable</option>
+                                <option value="stable">stable</option>
+                                <option value="stage">stage</option>
+                                <option value="naive">naive</option>
+                                <option value="conflict-free">conflict-free</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-field col s6">
+                        <div class="">
+                            <label>Semantics B: </label>
+                        </div>
+                        <div>
+                            <select id="_semantic-b" class="browser-default">
+                                <option value="cf2">cf2</option>
+                                <option value="admissible">admissible</option>
+                                <option value="complete">complete</option>
+                                <option value="preferred">preferred</option>
+                                <option value="semi-stable">semi-stable</option>
+                                <option value="stable">stable</option>
+                                <option value="stage">stage</option>
+                                <option value="naive">naive</option>
+                                <option value="conflict-free">conflict-free</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">tune</i>
+                        <input id="_route" class="validate" type="tel">
+                        <label for="_route">Preset facets</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">hdr_weak</i>
+                        <input id="_n_solutions" class="validate" type="tel">
+                        <label for="_n_solutions">Number of solutions</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <a class="waves-effect waves-light btn btn-primary" id="go-project"><i
+                class="material-icons left">play_circle_outline</i>Create</a>
+
+        <div class="right" id="loading"></div>
+    </div>
+</div>

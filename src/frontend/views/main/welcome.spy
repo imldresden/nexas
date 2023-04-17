@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<meta charset="utf-8" name="viewport"
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="en">
+
+<head>
+  <title>{{ title }}</title>
+  << styles >>
+</head>
+
+
+<body>
+
+  
+  << menus/menu >>
+  << modals/new-project >>
+  
+  <div style="display:flex">
+    
+    <div id="arguments" class=""></div>
+    <div id="extensions" class="svg-container"></div>
+    <div id="correlation" class="svg-container"></div>
+
+    << menus/settings >>
+    
+    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="stripes" viewBox="0,0,8,8" width="8" height="8" patternUnits="userSpaceOnUse">
+          <polygon points="0,0 4,0 0,4" fill="black"></polygon>
+          <polygon points="0,8 8,0 8,4 4,8" fill="black"></polygon>
+          <polygon points="0,4 0,8 8,0 4,0" fill="none"></polygon>
+          <polygon points="4,8 8,8 8,4" fill="none"></polygon>
+        </pattern>
+      </defs>
+    </svg>
+
+  </div>
+
+  << scripts >>
+</body>
+
+</html>

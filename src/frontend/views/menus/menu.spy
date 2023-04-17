@@ -1,0 +1,54 @@
+<nav>
+  <div class="nav-wrapper">
+    <div class="brand-logo">
+      <img src="/favicon.svg" style="margin-top: 10px;margin-left:-15px;" width="30" height="30">
+      <div class="brand-logo" style="
+        margin-left:15px;
+        text-align:center;
+        line-height: 15px;
+        padding: 0.45em 0em 0.4em 0em;
+        display: inline;"
+      >  
+        <a href=""> {{ title }}</a>  
+      </div>
+    </div>
+    
+    <div>
+      <span class="white-text text-darken-2" id="project-id-span">Project ID: </span>  
+      <div class="input-field" id="project-id-div">
+        <input class="white-text" disabled placeholder="Project ID" id="uuid" type="text" value="{{ uuid }}">
+        
+      </div>
+    </div>
+    <ul id="nav-mobile" class="right">
+
+      {{ menu_specific }}
+      
+      
+      <li>  
+        <a id="argumentsToggle" class="tooltipped active" type="button" data-tooltip="Toggle Arguments">
+          <i class="large material-icons">sort</i>
+        </a>
+      </li>
+
+      <li>  
+        <a id="extensionsToggle" class="tooltipped active" type="button" data-tooltip="Toggle Extensions">
+          <i class="large material-icons">grain</i>
+        </a>
+      </li>
+
+      <li>  
+        <a id="correlationToggle" class="tooltipped" type="button" data-tooltip="Toggle Correlation">
+          <i class="large material-icons">apps</i>
+        </a>
+      </li>
+      
+      <li>
+        <a id="showSettingsMenuButton" class="tooltipped" type="button" data-tooltip="Settings">
+          <i class="large material-icons">settings</i>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
