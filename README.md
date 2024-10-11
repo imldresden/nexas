@@ -1,6 +1,17 @@
 # nexas
 For more information, please visit: https://imld.de/en/research/research-projects/nexas/
 
+## how to use: 
+
+### docker: 
+```
+docker build . -t <your username>/nexas
+docker run -dp 7007:3000 <your username>/nexas:latest
+```
+
+after installation, nexas will be accessible at: https://localhost:7007 with a sample dataset (long-island-railroad_20090825_0512.gml.20.apx)
+
+### local installation: 
 (backend) console:
 ```
 nexas $ python venv venv
