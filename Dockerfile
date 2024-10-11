@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM python:3.12
 WORKDIR /usr/src/nexas
 
 ### 1. node 16
@@ -17,23 +17,9 @@ RUN apt-get update && \
     apt-get clean && \
     apt-get autoclean
 
-### 3. python 3.8 
-RUN apt update && \
-    apt install --no-install-recommends -y build-essential software-properties-common && \
-    add-apt-repository -y ppa:deadsnakes/ppa && \
-    apt install --no-install-recommends -y python3.8 python3.8-dev python3.8-distutils && \
-    apt clean && rm -rf /var/lib/apt/lists/*
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.6 1
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.8 2
-RUN curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
-    python3 get-pip.py --force-reinstall && \
-    rm get-pip.py
-
-### 4. clingo
-RUN python3 -m pip install --user --upgrade clingo
-
-### 5. install app
+### 2. install app
 COPY ./src ./src
+COPY ./input ./input
 COPY ./data ./data
 WORKDIR /usr/src/nexas/src
 RUN pip install -r ./requirements.txt 
