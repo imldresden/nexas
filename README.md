@@ -19,7 +19,7 @@ nexas $ source venv/bin/activate
 (venv) nexas $ cd src
 (venv) src $ pip install -r requirements.txt
 ```
-To that it creates the files, you can run: 
+To test that it creates the files, you can run: 
 ```
 (venv) src $ python server.py --apx "../input/massachusetts_srta_2014-11-13.gml.50.apx" --to "../data/<name>/" --n 10000 --sem "cf2" "stage" --route ""
 ```
