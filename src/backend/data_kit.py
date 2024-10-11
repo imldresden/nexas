@@ -1,7 +1,7 @@
-from audioop import reverse
 from concurrent.futures import process
 import logging
 from dataclasses import dataclass
+from audioop import reverse
 from typing import List, Optional, Tuple, Any, Dict
 import re
 

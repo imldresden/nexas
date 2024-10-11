@@ -11,7 +11,7 @@ import {
     rmSync
 } from 'fs';
 import { createRequire } from "module";
-import { spawn, spawnSync } from 'child_process';
+import { spawn } from 'child_process';
 
 const require = createRequire(import.meta.url);
 const upload = require('express-fileupload');
